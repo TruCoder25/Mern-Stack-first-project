@@ -25,3 +25,29 @@ This project implements a responsive **Sign Up** and **Sign In** page with **dyn
 
 ---
 
+# 🔐 User Authentication API (Signup / Login / Logout 🚀 Day 2)
+
+This project implements a basic **user authentication system** using **Node.js**, **Express.js**, **MongoDB**, **JWT**, and **cookies**.
+
+---
+
+## 🚀 Features
+
+- ✅ User Registration (`/api/user/register`)
+- ✅ User Login (`/api/user/login`)
+- ✅ User Logout (`/api/user/logout`)
+- ✅ Cookie-based JWT token management
+- ✅ Protected route to verify if a user is authenticated
+
+---
+
+## 🛠️ Tech Stack
+
+- ***Backend: Node.js, Express.js***
+
+- ***Database: MongoDB + Mongoose***
+
+- ***Authentication: JWT + Cookies***
+
+- ***Middleware: CORS, Cookie-parser, Express JSON***
+
