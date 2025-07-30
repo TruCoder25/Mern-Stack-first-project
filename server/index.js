@@ -21,8 +21,12 @@ app.use(express.json())
 
 app.use('/api/user',userRouter)
 
-app.use('/api/test',(req,res)=>{
-    res.status(200).json({message:"hello express"})
-})
+// app.use('/api/test',(req,res)=>{
+//     res.status(200).json({message:"hello express"})
+// })
 
-app.listen(3001,()=>console.log("App is running at port /3001"))
+// app.get('/api/user/auth', (req, res) => {
+//   res.json({ success: true, userInfo: { email: 'pra12345@gmail.com' } });
+// });
+
+app.listen(8000,()=>console.log("App is running at port /8000"))

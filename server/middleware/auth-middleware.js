@@ -4,10 +4,11 @@ const user = require('../models/user')
 
 const userAuthVerification = async(req,res)=>{
     const token = req.cookies.token;
-
+    
+    
     if(!token)
     {
-        return res.status(401).json({
+        return res.status(400).json({
             success : false,
             message : 'Token is not available or invalid token'
         })
@@ -28,7 +29,7 @@ const userAuthVerification = async(req,res)=>{
         }
         catch(error)
         {
-            return res.staus(401).json({
+            return res.status(401).json({
                 success : false,
                 message : 'User Not Authenticated'
             })

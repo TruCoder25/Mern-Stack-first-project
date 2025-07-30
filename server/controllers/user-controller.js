@@ -2,7 +2,7 @@ const Joi = require('joi');
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { Result } = require('postcss');
+// const { Result } = require('postcss');
 
 const registerSchema = Joi.object({
   name: Joi.string().required(),
@@ -22,7 +22,7 @@ const generateToken = (userId) => {
 };
 
 const registerUser = async (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { name, email, password } = await req.body;
 
   const { error } = registerSchema.validate({ name, email, password });
 
@@ -80,7 +80,7 @@ const registerUser = async (req, res, next) => {
 };
 
 const loginUser = async(req,res,next)=>{
-        const{email,password} = req.body;
+        const{email,password} =  await req.body;
 
         const { error } = loginSchema.validate({ email, password });
 
