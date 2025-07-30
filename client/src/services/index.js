@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const callRegisterUserApi = async (formData) => {
   const response = await axios.post(
-    "http://localhost:3001/api/user/register",
+    "http://localhost:8000/api/user/register",
     formData,
     {
       withCredentials: true
@@ -15,22 +15,26 @@ export const callRegisterUserApi = async (formData) => {
 
 export const callLoginUserApi = async(formData)=>{
   const response = await axios.post(
-    "http://localhost:3001/api/user/login",
+    "http://localhost:8000/api/user/login",
     formData,
     {
       withCredentials: true
     }
+    
   );
+
   return response?.data;
 }
 
 export const callUserAuthApi = async()=>{
   const response = await axios.post(
-    "http://localhost:3001/api/user/auth",
+    "http://localhost:8000/api/user/auth",
     {},
     {
       withCredentials:true
     }
+
   )
+  // console.log(response.data)
   return response?.data;
 }

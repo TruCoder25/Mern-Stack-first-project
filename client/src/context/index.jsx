@@ -15,6 +15,8 @@ function TaskManagerProvider({children}){
     useEffect(()=>{
         const verifyUserCookie = async()=>{
             const data  = await callUserAuthApi();
+            
+            console.log(data)
 
             if(data?.userInfo)
             {
@@ -27,9 +29,10 @@ function TaskManagerProvider({children}){
         verifyUserCookie();
 
     },[navigate,location.pathname])
+ 
+    
 
-    return <TaskManagerContext.Provider>{children}</TaskManagerContext.Provider>
+    return <TaskManagerContext.Provider value={{ user, setUser }} >{children}</TaskManagerContext.Provider>
 }
 
-export default TaskManagerProvider
-
+export default TaskManagerProvider;
